@@ -1,7 +1,8 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        node: true
     },
     overrides: [
         {
@@ -19,6 +20,7 @@ module.exports = {
         sourceType: 'module'
     },
     rules: {
+        // Possible Errors
         'array-callback-return': [
             'error',
             { allowImplicit: true, checkForEach: true }
@@ -54,6 +56,56 @@ module.exports = {
         'no-promise-executor-return': 'error',
         'no-prototype-builtins': 'error',
         'no-self-assign': ['error', { props: true }],
-        'no-self-compare': 'error'
+        'no-self-compare': 'error',
+        'no-setter-return': 'error',
+        'no-sparse-arrays': 'error',
+        'no-template-curly-in-string': 'error',
+        'no-this-before-super': 'error',
+        'no-undef': ['error', { typeof: true }],
+        'no-unexpected-multiline': 'error',
+        'no-unmodified-loop-condition': 'error',
+        'no-unreachable': 'error',
+        'no-unreachable-loop': 'error',
+        'no-unsafe-finally': 'error',
+        'no-unsafe-negation': ['error', { enforceForOrderingRelations: true }],
+        'no-unsafe-optional-chaining': [
+            'error',
+            { disallowArithmeticOperators: true }
+        ],
+        'no-unused-private-class-members': 'error',
+        'no-unused-vars': [
+            'error',
+            {
+                args: 'all',
+                argsIgnorePattern: '^_',
+                destructuredArrayIgnorePattern: '^_',
+                ignoreRestSiblings: true
+            }
+        ],
+        'no-use-before-define': 'error',
+        'no-useless-backreference': 'error',
+        'require-atomic-updates': 'error',
+        'use-isnan': 'error',
+        'valid-typeof': ['error', { requireStringLiterals: true }],
+        // Best Practices
+        'accessor-pairs': 'error',
+        'arrow-body-style': [
+            'error',
+            'as-needed',
+            { requireReturnForObjectLiteral: true }
+        ],
+        'block-scoped-var': 'error',
+        camelcase: 'error',
+        'capitalized-comments': [
+            'warn',
+            'always',
+            { ignoreConsecutiveComments: true, ignoreInlineComments: true }
+        ],
+        'class-methods-use-this': 'warn',
+        complexity: ['warn', { max: 9 }],
+        curly: ['warn', 'multi', 'consistent'],
+        'default-case': 'error',
+        'default-case-last': 'error',
+        'default-param-last': 'error'
     }
 };
