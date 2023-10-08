@@ -54,7 +54,7 @@ module.exports = {
         'no-new-native-nonconstructor': 'error',
         'no-obj-calls': 'error',
         'no-promise-executor-return': 'error',
-        'no-prototype-builtins': 'error',
+        'no-prototype-builtins': 'warn',
         'no-self-assign': ['error', { props: true }],
         'no-self-compare': 'error',
         'no-setter-return': 'error',
@@ -106,6 +106,28 @@ module.exports = {
         curly: ['warn', 'multi', 'consistent'],
         'default-case': 'error',
         'default-case-last': 'error',
-        'default-param-last': 'error'
+        'default-param-last': 'error',
+        'dot-notation': 'error',
+        eqeqeq: ['error', 'always', { null: 'ignore' }],
+        'func-names': ['warn', 'as-needed'],
+        'func-style': ['warn', 'declaration', { allowArrowFunctions: true }],
+        'grouped-accessor-pairs': ['warn', 'getBeforeSet'],
+        'guard-for-in': 'error',
+        'logical-assignment-operators': [
+            'warn',
+            'always',
+            { enforceForIfStatements: true }
+        ],
+        'max-depth': ['warn', { max: 4 }],
+        'max-nested-callbacks': ['warn', { max: 4 }],
+        'multiline-comment-style': ['warn', 'starred-block'],
+        'new-cap': 'error',
+        'no-alert': 'warn',
+        'no-array-constructor': 'error',
+        'no-caller': 'error',
+        'no-case-declarations': 'error',
+        'no-console': 'warn',
+        'no-delete-var': 'error',
+        'no-div-regex': 'error'
     }
 };
