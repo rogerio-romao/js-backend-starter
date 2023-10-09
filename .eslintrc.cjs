@@ -229,5 +229,11 @@ module.exports = {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'error',
+        'require-await': 'error',
+        'require-unicode-regexp': 'warn',
+        'require-yield': 'error',
+        'spaced-comment': 'warn',
+        'symbol-description': 'error',
+        yoda: 'error',
     },
 };
