@@ -1,9 +1,10 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true,
+        es2024: true,
         node: true,
     },
+    plugins: ['unicorn'],
     overrides: [
         {
             env: {
@@ -106,7 +107,7 @@ module.exports = {
         ],
         'class-methods-use-this': 'warn',
         complexity: ['warn', { max: 9 }],
-        curly: ['warn', 'multi', 'consistent'],
+        curly: ['warn', 'all'],
         'default-case': 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
@@ -155,15 +156,6 @@ module.exports = {
         'no-lone-blocks': 'error',
         'no-lonely-if': 'error',
         'no-loop-func': 'error',
-        'no-magic-numbers': [
-            'warn',
-            {
-                ignore: [-1, 0, 1],
-                ignoreDefaultValues: true,
-                ignoreArrayIndexes: true,
-                detectObjects: false,
-            },
-        ],
         'no-mixed-operators': [
             'error',
             {
@@ -235,5 +227,27 @@ module.exports = {
         'spaced-comment': 'warn',
         'symbol-description': 'error',
         yoda: 'error',
+        // Unicorn rules
+        'unicorn/better-regex': 'warn',
+        'unicorn/catch-error-name': ['warn', { name: 'error' }],
+        'unicorn/consistent-destructuring': 'warn',
+        'unicorn/consistent-function-scoping': 'error',
+        'unicorn/custom-error-definition': 'error',
+        'unicorn/empty-brace-spaces': 'warn',
+        'unicorn/error-message': 'error',
+        'unicorn/escape-case': 'warn',
+        'unicorn/explicit-length-check': 'warn',
+        'unicorn/filename-case': [
+            'warn',
+            { cases: { kebabCase: true, pascalCase: true } },
+        ],
+        'unicorn/new-for-builtins': 'warn',
+        'unicorn/no-abusive-eslint-disable': 'warn',
+        'unicorn/no-array-callback-reference': 'warn',
+        'unicorn/no-array-for-each': 'warn',
+        'unicorn/no-array-method-this-argument': 'warn',
+        'unicorn/no-await-expression-member': 'warn',
+        'unicorn/no-console-spaces': 'error',
+        'unicorn/no-document-cookie': 'error',
     },
 };
