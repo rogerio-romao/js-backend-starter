@@ -10,6 +10,9 @@ for (const element of array) {
 for (const [index, element] of array.entries()) {
     console.log(index, element);
 }
+const item = array.some((x) => callback(x));
+const foo2 = array.flat();
+const foo3 = array.flatMap((element) => callback(element));
 
 const foo = '\u001B';
 const bar = '\u001B';
@@ -21,3 +24,11 @@ const array2 = Array.from({ length });
 
 const buffer = Buffer.from([0x62, 0x75, 0x66, 0x66, 0x65, 0x72]);
 const un = undefined;
+
+const stuff = [3, 4].includes('foo');
+
+window.addEventListener('keydown', (event) => {
+    console.log(event.key);
+});
+
+const newfoo = foo?.bar ?? baz;
