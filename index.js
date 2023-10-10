@@ -32,3 +32,15 @@ window.addEventListener('keydown', (event) => {
 });
 
 const newfoo = foo?.bar ?? baz;
+
+const inf = Number.POSITIVE_INFINITY;
+
+const array3 = new Set([1, 2, 3]);
+const hasValue = (value) => array3.has(value);
+
+const crazyText = `
+query user(id: 5) {
+    firstName
+    lastName
+}
+`;
