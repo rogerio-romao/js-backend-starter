@@ -47,3 +47,57 @@ query user(id: 5) {
     lastName
 }
 `;
+
+const doSomething = async () => {
+    await test();
+};
+
+const doSomethingElse = async () => {
+    await test();
+};
+
+function say(a, b) {
+    print(`${a} ${b}`);
+}
+
+say('hello', 'world');
+
+const x = 0;
+
+if (x === 0) {
+    doSomething();
+} else if (x === 1) {
+    doSomethingElse();
+} else {
+    throw new Error('x should be 0 or 1');
+}
+
+const y = 0;
+
+if (x !== undefined && y === 2) {
+    // ...
+}
+
+'hello'.lastIndexOf('e');
+
+const result = array.length > 0;
+
+if (result) {
+    doSomething();
+    doSomethingElse();
+} else if (result === false) {
+    doSomething();
+} else {
+    doSomethingElse();
+}
+
+let a;
+if (a) {
+    // Noncompliant
+    doSomething();
+}
+
+if (a) {
+    // Noncompliant
+    doSomething();
+}
