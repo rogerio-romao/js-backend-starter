@@ -4,7 +4,7 @@ module.exports = {
         es2024: true,
         node: true,
     },
-    plugins: ['unicorn', 'import'],
+    plugins: ['unicorn', 'import', 'eslint-comments'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
@@ -334,5 +334,15 @@ module.exports = {
             'error',
             { noUselessIndex: true, commonjs: true },
         ],
+        // ESLint Comments rules
+        'eslint-comments/disable-enable-pair': [
+            'error',
+            { allowWholeFile: true },
+        ],
+        'eslint-comments/no-aggregating-enable': 'warn',
+        'eslint-comments/no-duplicate-disable': 'warn',
+        'eslint-comments/no-unlimited-disable': 'warn',
+        'eslint-comments/no-unused-disable': 'error',
+        'eslint-comments/no-unused-enable': 'error',
     },
 };
