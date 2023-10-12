@@ -4,21 +4,8 @@ module.exports = {
         es2024: true,
         node: true,
     },
-    plugins: ['unicorn'],
-    overrides: [
-        {
-            env: {
-                node: true,
-                browser: true,
-                es2024: true,
-            },
-            files: ['.eslintrc.{js,cjs}'],
-            parserOptions: {
-                ecmaVersion: 'latest',
-                sourceType: 'module',
-            },
-        },
-    ],
+    plugins: ['unicorn', 'import'],
+    parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -325,5 +312,21 @@ module.exports = {
         'unicorn/template-indent': 'error',
         'unicorn/text-encoding-identifier-case': 'warn',
         'unicorn/throw-new-error': 'error',
+        // Import rules
+        'import/default': 'error',
+        'import/dynamic-import-chunkname': 'error',
+        'import/export': 'error',
+        'import/max-dependencies': [
+            'warn',
+            { max: 10, ignoreTypeImports: true },
+        ],
+        'import/named': 'error',
+        'import/namespace': 'error',
+        'import/newline-after-import': 'warn',
+        'import/no-absolute-path': 'error',
+        'import/no-mutable-exports': 'error',
+        'import/no-named-as-default-member': 'error',
+        'import/no-named-as-default': 'error',
+        'import/no-named-default': 'error',
     },
 };
