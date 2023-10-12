@@ -1,10 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-// packages
-import { React } from 'react';
-
 // helpers
-import { test } from './test.js';
+import { test } from './test';
 
 console.log('abc', 'def');
 const callback = (x) => x + 1;
