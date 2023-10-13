@@ -101,3 +101,20 @@ if (a) {
     // Noncompliant
     doSomething();
 }
+if (a !== 2) {
+    // Noncompliant
+    doSomething();
+}
+
+function booleanFunction() {
+    return true;
+}
+
+if (booleanFunction()) {
+    // Noncompliant
+    doSomething();
+}
+
+function getLength(a, b, c) {
+    return a.length + b.length + c.length;
+}
