@@ -30,10 +30,6 @@ const un = undefined;
 
 const stuff = [3, 4].includes('foo');
 
-window.addEventListener('keydown', (event) => {
-    console.log(event.key);
-});
-
 const newfoo = foo?.bar ?? baz;
 
 const inf = Number.POSITIVE_INFINITY;
@@ -57,7 +53,7 @@ const doSomethingElse = async () => {
 };
 
 function say(a, b) {
-    print(`${a} ${b}`);
+    console.log(`${a} ${b}`);
 }
 
 say('hello', 'world');
