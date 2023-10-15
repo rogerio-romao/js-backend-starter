@@ -4,18 +4,18 @@
 import { test } from './test';
 
 console.log('abc', 'def');
-const callback = (x) => x + 1;
+const handler = (x) => x + 1;
 const array = [1, 2, 3];
-array.map((element) => callback(element));
+array.map((element) => handler(element));
 for (const element of array) {
-    callback(element);
+    handler(element);
 }
 for (const [index, element] of array.entries()) {
     console.log(index, element);
 }
-const item = array.some((x) => callback(x));
+const item = array.some((x) => handler(x));
 const foo2 = array.flat();
-const foo3 = array.flatMap((element) => callback(element));
+const foo3 = array.flatMap((element) => handler(element));
 
 const foo = '\u001B';
 const bar = '\u001B';

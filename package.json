@@ -1,7 +1,7 @@
 {
-    "name": "eslint-preset-js",
+    "name": "eslint-preset-js-backend",
     "version": "1.0.0",
-    "description": "My own personal Eslint preset",
+    "description": "My own personal Eslint preset for Javascript backend projects",
     "main": "index.js",
     "type": "module",
     "scripts": {
