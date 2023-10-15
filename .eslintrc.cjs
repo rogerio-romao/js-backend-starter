@@ -4,7 +4,7 @@ module.exports = {
         es2024: true,
         node: true,
     },
-    plugins: ['unicorn', 'import', 'eslint-comments', 'sonarjs'],
+    plugins: ['unicorn', 'import', 'eslint-comments', 'sonarjs', 'promise'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
@@ -364,5 +364,18 @@ module.exports = {
         'sonarjs/no-unused-collection': 'warn',
         'sonarjs/no-use-of-empty-return-value': 'warn',
         'sonarjs/non-existent-operator': 'error',
+        // Promise rules
+        'promise/always-return': 'error',
+        'promise/catch-or-return': 'error',
+        'promise/no-callback-in-promise': 'warn',
+        'promise/no-multiple-resolved': 'warn',
+        'promise/no-nesting': 'error',
+        'promise/no-new-statics': 'error',
+        'promise/no-promise-in-callback': 'warn',
+        'promise/no-return-in-finally': 'warn',
+        'promise/no-return-wrap': ['error', { allowReject: true }],
+        'promise/param-names': 'error',
+        'promise/prefer-await-to-callbacks': 'warn',
+        'promise/valid-params': 'error',
     },
 };
