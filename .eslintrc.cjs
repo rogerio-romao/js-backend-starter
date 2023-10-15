@@ -220,7 +220,7 @@ module.exports = {
         'unicorn/explicit-length-check': 'warn',
         'unicorn/filename-case': [
             'warn',
-            { cases: { kebabCase: true, pascalCase: true } },
+            { cases: { kebabCase: true, camelCase: true } },
         ],
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'warn',
