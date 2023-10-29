@@ -2,11 +2,15 @@
     "name": "eslint-preset-js-backend",
     "version": "1.0.0",
     "description": "My own personal Eslint preset for Javascript backend projects",
-    "main": "index.js",
+    "main": "src/index.js",
     "type": "module",
     "scripts": {
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+        "start:dev": "node --watch src/index.js",
+        "start:prod": "node src/index.js",
+        "test": "vitest",
+        "test:ci": "vitest --run"
     },
     "author": "Rogerio Romao",
     "license": "MIT",
@@ -17,6 +21,7 @@
         "eslint-plugin-import": "^2.29.0",
         "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-sonarjs": "^0.21.0",
-        "eslint-plugin-unicorn": "^48.0.1"
+        "eslint-plugin-unicorn": "^48.0.1",
+        "vitest": "^0.34.6"
     }
 }
