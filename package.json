@@ -1,7 +1,7 @@
 {
-    "name": "eslint-preset-js-backend",
+    "name": "js-backend-starter",
     "version": "1.0.0",
-    "description": "My own personal Eslint preset for Javascript backend projects",
+    "description": "My own personal starter template for Javascript backend projects",
     "main": "src/index.js",
     "type": "module",
     "scripts": {
